@@ -40,7 +40,7 @@ if len(sys.argv) > 3:
 
 pwc_model_fn = './pwc_net.pth.tar';
 
-im_all = [imread(img) for img in [im1_fn, im2_fn]]
+im_all = [cv2.merge(( cv2.imread(img, -1), cv2.imread(img, -1), cv2.imread(img, -1) )) for img in [im1_fn, im2_fn]]
 im_all = [im[:, :, :3] for im in im_all]
 
 # rescale the image size to be multiples of 64
