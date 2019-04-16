@@ -55,7 +55,7 @@ for i in range(len(im_all)):
 
 for _i, _inputs in enumerate(im_all):
 	im_all[_i] = im_all[_i][:, :, ::-1]
-	im_all[_i] = 1.0 * im_all[_i]/255.0
+	im_all[_i] = 1.0 * im_all[_i]/65536.0
 	
 	im_all[_i] = np.transpose(im_all[_i], (2, 0, 1))
 	im_all[_i] = torch.from_numpy(im_all[_i])
