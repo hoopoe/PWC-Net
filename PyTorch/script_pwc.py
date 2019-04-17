@@ -31,7 +31,7 @@ def writeFlowFile(filename,uv):
 		f.write(H.tobytes())
 		f.write(uv.tobytes())
 
-  if __name__ == "__main__":
+if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("-l", "--list", dest="list", help="list of pairs", default="/input/list.txt")
   parser.add_argument("-o", "--out", dest="out", help="out folder", default="/1000x600/out")
